@@ -1,5 +1,6 @@
 # Tenda Router AC11 Vulnerability
-The Vulnerability is in `/goform/setportList` page which influence the lastest version routerOS(RTOS, This is system different from linux system)[AC11_V02.03.01.104_CN](https://www.tenda.com.cn/download/detail-3163.html)
+The Vulnerability is in `/goform/setportList` page which influence the lastest version of this router OS. (this is a RTOS that are different from linux system)
+The Version is [AC11_V02.03.01.104_CN](https://www.tenda.com.cn/download/detail-3163.html)
 
 ## Vulnerability description
 In the page `/gofrom/setportList` have one stack buffer overflow vulnerability.
@@ -27,4 +28,4 @@ module1=wifiBasicCfg&doubleBandUnityEnable=false&wifiTotalEn=true&wifiEn=true&wi
 ```
 ## Acknowledgment 
 
-Credit to [@peanuts](https://github.com/peanuts62), [@leonW7](https://github.com/leonW7), [@cpegg](https://github.com/cpeggg),[@ainevsia](https://github.com/ainevsia), [@Lnkvct](https://github.com/Lnkvct) and [@Yu3H0](https://github.com/Yu3H0/) from Shanghai Jiao Tong University.
+Credit to [@Yu3H0](https://github.com/Yu3H0/),[@1chig0](https://github.com/1chig0),[@Lnkvct](https://github.com/Lnkvct) from Shanghai Jiao Tong University.
