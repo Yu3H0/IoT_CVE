@@ -3,7 +3,7 @@ The Vulnerability is in `/goform/setVLAN` page which influence the lastest versi
 The Version is [AC11_V02.03.01.104_CN](https://www.tenda.com.cn/download/detail-3163.html)
 
 ## Vulnerability description
-In the function sub_800CBC50(page `/gofrom/setVLAN`) have two stack buffer overflow vulnerability.
+In the function `sub_800CBC50` (page `/gofrom/setVLAN`) have two stack buffer overflow vulnerability.
 
 1. It isn't limit our input when we input `VLANArea` in `v8` and `VLANID` in `v9`.
 2. if `v8` is equal to `1`,`v9` copy to `v14` and jump to LABEL_6

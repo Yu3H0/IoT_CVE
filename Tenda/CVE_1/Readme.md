@@ -3,7 +3,7 @@ The Vulnerability is in `/goform/setwanType` page which influence the lastest ve
 The Version is [AC11_V02.03.01.104_CN](https://www.tenda.com.cn/download/detail-3163.html)
 
 ## Vulnerability description
-In the function sub_800C6448 (page `/gofrom/setwanType`) have one stack buffer overflow vulnerability.
+In the function `sub_800C6448` (page `/gofrom/setwanType`) have one stack buffer overflow vulnerability.
 
 1. It isn't limit our input when we input `wanDns1` in `v12` and `wanDns2` in `v13`.
 2. Then `v12` and `v13` will copy to a stack value `v45` by using `sprintf_1(v45, "%s %s", v12, v13);` .%s couldn't limit copy length ,so wo can make stack buffer overflow in `v45`

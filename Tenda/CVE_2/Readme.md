@@ -3,7 +3,7 @@ The Vulnerability is in `/goform/setportList` page which influence the lastest v
 The Version is [AC11_V02.03.01.104_CN](https://www.tenda.com.cn/download/detail-3163.html)
 
 ## Vulnerability description
-In the function sub_800CAA38 (page `/gofrom/setportList`) have one stack buffer overflow vulnerability.
+In the function `sub_800CAA38` (page `/gofrom/setportList`) have one stack buffer overflow vulnerability.
 
 1. It isn't limit our input when we input `portList` in `v9`.
 2. Then if `v9` is different from a fixed string, `v9`will copy to a stack value `v22` by using `strcpy(v22, v9);`.strcpy couldn't limit copy length ,so wo can make stack buffer overflow in `v22`
