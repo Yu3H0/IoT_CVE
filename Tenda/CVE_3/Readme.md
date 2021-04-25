@@ -3,7 +3,7 @@ The Vulnerability is in `/goform/setmac` page which influence the lastest versio
 The Version is [AC11_V02.03.01.104_CN](https://www.tenda.com.cn/download/detail-3163.html)
 
 ## Vulnerability description
-In the page `/gofrom/setmac` have one stack buffer overflow vulnerability.
+In the function sub_800CF7DC (page `/gofrom/setmac`) have one stack buffer overflow vulnerability.
 
 1. It isn't limit our input when we input `mac` in `input`.
 2. Then if the `input` is different from the nvram in `trust list`, `input` will copy to a stack value `v14` by using `strcpy(v14, input);`.strcpy couldn't limit copy length ,so wo can make stack buffer overflow in `v14`
