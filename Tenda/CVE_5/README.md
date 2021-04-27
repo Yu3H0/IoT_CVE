@@ -10,11 +10,11 @@ This function uses `strcpy` to copy the string pointed by `v3` into a stack buff
 
 ![1](1.PNG)
 
-the `led_time` variable can be controlled by attacker by calling the function `sub_800D50A4`(page `/goform/setLED`) which gets in a parameter called `LEDCloseTime` into varialbe `v10`, which can then be used to assign to the `led_time` variable.If `v10` is different from the original value of nvram variable `led_time`,then the nvram variable `led_time` will be set as `v10`
+the `led_time` variable can be controlled by attacker by calling the function `sub_800D50A4`(page `/goform/setLED`) which gets in a parameter called `LEDCloseTime` into varialbe `v10`, which can then be used to assign to the `led_time` variable.If `v10` is different from the original value of nvram variable `led_time`(variable `v13` and `v14`),then the nvram variable `led_time` will be set as `v10`
 
 ![2](2.PNG)
 
-So by first setting the `LEDCloseTime` and then requesting the page `/goform/getLED`, the attacker can easily perform a **Deny of Service Attack** or **Remote Code Execution** with carefully crafted overflow data.
+So by first setting the `LEDCloseTime` and then requesting the page `/goform/rc_igmp`, the attacker can easily perform a **Deny of Service Attack** or **Remote Code Execution** with carefully crafted overflow data.
 
 ## POC
 
