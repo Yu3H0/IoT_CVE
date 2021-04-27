@@ -14,7 +14,7 @@ the `led_ctl_type` variable can be controlled by attacker by calling the functio
 
 ![2](2.PNG)
 
-So by first setting the `LEDStatus` and then requesting the page `/goform/updateLED`, the attacker can easily perform a **Deny of Service Attack** or **Remote Code Execution** with carefully crafted overflow data.
+So by first setting the `LEDStatus` and then requesting the page `/goform/getLEDStatus`, the attacker can easily perform a **Deny of Service Attack** or **Remote Code Execution** with carefully crafted overflow data.
 
 ## POC
 
