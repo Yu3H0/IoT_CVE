@@ -10,7 +10,7 @@ This function uses `strcpy` to copy the string pointed by `v3` into a stack buff
 
 ![1](1.PNG)
 
-the `led_ctl_type` variable can be controlled by attacker by calling the function `sub_800D50A4`(page `/goform/setLED`) which gets in a parameter called `LEDStatus` into varialbe `v8`. If `v8` is different from the original value of nvram variable `led_ctl_type`,then the nvram variable `led_ctl_type` will be set as `v8`
+the `led_ctl_type` variable can be controlled by attacker by calling the function `sub_800D50A4`(page `/goform/setLED`) which gets in a parameter called `LEDStatus` into varialbe `v8`. If `v8` is different from the original value of nvram variable `led_ctl_type` (variable `v9`),then the nvram variable `led_ctl_type` will be set as `v8`
 
 ![2](2.PNG)
 
