@@ -22,7 +22,7 @@ In function `sub_80012558`,it will first get the original nvram variable of `lan
 
 ![4](4.PNG)
 
-So by first setting the `lan_netmask` and then requesting the page `/goform/erro_check`, the attacker can easily perform a **Deny of Service Attack** or **Remote Code Execution** with carefully crafted overflow data.
+So by first setting the `lan_netmask` and then requesting the page `/goform/rc_dhcp_server`, the attacker can easily perform a **Deny of Service Attack** or **Remote Code Execution** with carefully crafted overflow data.
 
 ## POC
 
