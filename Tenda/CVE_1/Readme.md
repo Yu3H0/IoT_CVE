@@ -3,6 +3,8 @@ The Vulnerability is in `/goform/setwanType` page which influence the lastest ve
 The Version is [AC11_V02.03.01.104_CN](https://www.tenda.com.cn/download/detail-3163.html)
 
 ## Vulnerability description
+An issue was discovered on Tenda AC11 devices with firmware through 02.03.01.104_CN. A stack buffer overflow vulnerability in `/gofrom/setwanType` allows attackers to execute arbitrary code on the system via a crafted post request.
+
 In the function `sub_800C6448` (page `/gofrom/setwanType`) have one stack buffer overflow vulnerability.
 
 1. It isn't limit our input when we input `wanDns1` in `v12` and `wanDns2` in `v13`.
@@ -28,4 +30,4 @@ module1=wifiBasicCfg&doubleBandUnityEnable=false&wifiTotalEn=true&wifiEn=true&wi
 ```
 ## Acknowledgment 
 
-Credit to [@Yu3H0](https://github.com/Yu3H0/) ,[@leonW7](https://github.com/leonW7), [@cpegg](https://github.com/cpeggg) from Shanghai Jiao Tong University.
+Credit to [@Yu3H0](https://github.com/Yu3H0/) ,[@leonW7](https://github.com/leonW7), [@cpegg](https://github.com/cpeggg) from Shanghai Jiao Tong University and TIANGONG Team of Legendsec at Qi'anxin Group.

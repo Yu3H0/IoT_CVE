@@ -3,6 +3,8 @@ The Vulnerability is in `/goform/setVLAN` page which influence the lastest versi
 The Version is [AC11_V02.03.01.104_CN](https://www.tenda.com.cn/download/detail-3163.html)
 
 ## Vulnerability description
+An issue was discovered on Tenda AC11 devices with firmware through 02.03.01.104_CN. A stack buffer overflow vulnerability in `/goform/setVLAN` allows attackers to execute arbitrary code on the system via a crafted post request.
+
 In the function `sub_800CBC50` (page `/gofrom/setVLAN`) have two stack buffer overflow vulnerability.
 
 1. It isn't limit our input when we input `VLANArea` in `v8` and `VLANID` in `v9`.
@@ -46,4 +48,4 @@ module1=wifiBasicCfg&doubleBandUnityEnable=false&wifiTotalEn=true&wifiEn=true&wi
 ```
 ## Acknowledgment 
 
-Credit to [@Yu3H0](https://github.com/Yu3H0/),[@peanuts](https://github.com/peanuts62),[@cpegg](https://github.com/cpeggg) from Shanghai Jiao Tong University.
+Credit to [@Yu3H0](https://github.com/Yu3H0/),[@peanuts](https://github.com/peanuts62),[@cpegg](https://github.com/cpeggg) from Shanghai Jiao Tong University and TIANGONG Team of Legendsec at Qi'anxin Group.
