@@ -61,10 +61,10 @@ Content-Type: application/x-www-form-urlencoded;
 Accept: */*
 Origin: http://192.168.0.1
 Accept-Encoding: gzip, deflate
-Accept-Language: zh-CN,zh;q=0.9
+Accept-Language: zh-CN,zh;q=0.9 
 Connection: close
 ```
 
 ## Acknowledgment
 
-Credit to [@Yu3H0](https://github.com/Yu3H0), [@Lnkvct](https://github.com/Lnkvct) , and [@peanuts](https://github.com/peanuts62) from Shanghai Jiao Tong University.
+Credit to [@Yu3H0](https://github.com/Yu3H0), [@Lnkvct](https://github.com/Lnkvct) , and [@peanuts](https://github.com/peanuts62) from Shanghai Jiao Tong University  and TIANGONG Team of Legendsec at Qi'anxin Group.

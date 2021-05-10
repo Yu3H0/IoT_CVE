@@ -60,4 +60,4 @@ Connection: close
 
 ## Acknowledgment
 
-Credit to [@Yu3H0](https://github.com/Yu3H0), [@peanuts](https://github.com/peanuts62), and [@cpegg](https://github.com/cpeggg) from Shanghai Jiao Tong University.
+Credit to [@Yu3H0](https://github.com/Yu3H0), [@peanuts](https://github.com/peanuts62), and [@cpegg](https://github.com/cpeggg) from Shanghai Jiao Tong University  and TIANGONG Team of Legendsec at Qi'anxin Group.
