@@ -64,3 +64,6 @@ Connection: close
 ## Acknowledgment
 
 Credit to [@Yu3H0](https://github.com/Yu3H0), [@Lnkvct](https://github.com/Lnkvct) , and [@1chig0](https://github.com/1chig0) from Shanghai Jiao Tong University and TIANGONG Team of Legendsec at Qi'anxin Group.
+
+## CVE ID
+CVE-2021-32193
