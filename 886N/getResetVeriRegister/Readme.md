@@ -3,7 +3,7 @@ This vulnerability is on the /cloud_config/router_post/get_reset_pwd_veirfy_code
 ## Vulnerability description
 There is a buffer overflow vulnerability on the /cloud_config/router_post/get_reset_pwd_veirfy_code interface.
 
-1. An interface ```/cloud_config/router_post/get_reset_pwd_veirfy_code``` is registered first in the chkRegVeriRegister function.
+1. An interface ```/cloud_config/router_post/get_reset_pwd_veirfy_code``` is registered first in the getResetVeriRegister function.
 ![](./getResetVeriRegister1.png)
 2. In the handler, the v7 variable is the ```username``` field in the packet, and the v9 variable is the ```account_type``` field in the packet. Then directly memcpy to the a3 variable refers to the address space, there is a buffer overflow problem.
 ![](./getResetVeriRegister2.png)
